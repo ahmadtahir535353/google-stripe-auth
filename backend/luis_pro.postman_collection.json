@@ -1,0 +1,117 @@
+{
+	"info": {
+		"_postman_id": "d2141d58-f934-408f-885b-6ac7ccfb4afd",
+		"name": "main",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "28041148"
+	},
+	"item": [
+		{
+			"name": "Google login",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"code\":\"eyJhbGciOiJSUzI1NiIsImtpZCI6IjJjOGEyMGFmN2ZjOThmOTdmNDRiMTQyYjRkNWQwODg0ZWIwOTM3YzQiLCJ0eXAiOiJKV1QifQ.eyJpc3MiOiJodHRwczovL2FjY291bnRzLmdvb2dsZS5jb20iLCJhenAiOiI2MDQ1NTk3MDY4MDUtMWM3NHZvdXI0am5mbmQ0cmd0aTJhMGJpbzRpZTVibDIuYXBwcy5nb29nbGV1c2VyY29udGVudC5jb20iLCJhdWQiOiI2MDQ1NTk3MDY4MDUtMWM3NHZvdXI0am5mbmQ0cmd0aTJhMGJpbzRpZTVibDIuYXBwcy5nb29nbGV1c2VyY29udGVudC5jb20iLCJzdWIiOiIxMDY4ODc3OTk4OTUwMDc4NDQwOTAiLCJlbWFpbCI6ImFobWFkdGFoaXJyYW5hNTM1M0BnbWFpbC5jb20iLCJlbWFpbF92ZXJpZmllZCI6dHJ1ZSwibmJmIjoxNzMzNDM0NTA2LCJuYW1lIjoiQWhtYWQgVGFoaXIiLCJwaWN0dXJlIjoiaHR0cHM6Ly9saDMuZ29vZ2xldXNlcmNvbnRlbnQuY29tL2EvQUNnOG9jTGQ1azlRRkZxekYxbGVFS2RvckJ5bEhsc1Rvd0txNjhYeVNuVUluS0xOelpKT0NramI9czk2LWMiLCJnaXZlbl9uYW1lIjoiQWhtYWQiLCJmYW1pbHlfbmFtZSI6IlRhaGlyIiwiaWF0IjoxNzMzNDM0ODA2LCJleHAiOjE3MzM0Mzg0MDYsImp0aSI6Ijc3NWI3MDU5MzZhMTQ5M2JjMmM3MDUxMDUzMmJiM2ZiMGJkNjNkZjcifQ.fjp28xpjDBhk7nenR7jNZYBxK6s1rr828N0GnTM4Jj-TcH-BBxSQl5o4lAEuf7JU_n9C0XdDU7APAD5X7dxUXs9RSQcnzEdWtO-zXqL5_eBrpdQQ5FQ7N3S-WBqiMhf4Rf3ljd10lTVIAz2-V0x22fb0iVX_vPphH7XqtsPpX4Z383szyVfJJMVvM-YfQrexG5WZrv7VbBL5ZoVCJWEPnXtw7kciIGBfcokApeeNYUw8Fw19wQiXK150CIsRi758oRzp_8m5fpaVM2iYDGeGjBOUusCgx616x9SrxdqjMTxI1CQXKtS39mhHdKFvXm9dzcVBQdkxEbJqRuwy5xmxPQ\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/auth/login/google",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"auth",
+						"login",
+						"google"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get User",
+			"request": {
+				"method": "GET",
+				"header": []
+			},
+			"response": []
+		},
+		{
+			"name": "Logout",
+			"request": {
+				"method": "GET",
+				"header": []
+			},
+			"response": []
+		},
+		{
+			"name": "Get Stripe Payment Intent",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/stripe/create-payment-intent",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"stripe",
+						"create-payment-intent"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Webhook stripe",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/stripe/webhook",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"stripe",
+						"webhook"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
