@@ -35,8 +35,9 @@ cp .env.example .env   # Create and configure environment variables
 
 python manage.py migrate
 python manage.py runserver
-```bash
-Example .env (Django)
+```
+
+ ### Example .env (Django)
 ```bash
 DEBUG=True
 STAGE=development
@@ -61,16 +62,17 @@ ALLOWED_HOSTS=*,localhost
 CSRF_TRUSTED_ORIGINS=http://127.0.0.1
 SECRET_KEY=#your_secret_key
 ENCRYPTION_KEY=your_32byte_key_base64
-```bash
+```
 
 
-2️⃣ Frontend (React + Vite)
+### 2️⃣ Frontend (React + Vite)
+
 ```bash
 cd frontend
 npm install
 cp .env.example .env  # Set your environment variables
-```bash
-Example .env (React)
+```
+### Example .env (React)
 ```bash
 VITE_GOOGLE_CLIENT_ID=85469282921-b2jjaeb1gfaovuhu38ipt5561s4v1r94.apps.googleusercontent.com
 GOOGLE_SECRET_ID=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
@@ -80,9 +82,9 @@ VITE_STRIPE_PUBLIC=pk_test_...
 
 VITE_BACKEND_URL=http://127.0.0.1:8000/api
 npm run dev
-```bash
+```
 
-⚙️ Flow Overview
+### ⚙️ Flow Overview
 1 User signs in with Google (React + OAuth)
 
 2 App checks backend if payment is completed
@@ -94,7 +96,7 @@ npm run dev
 5 User gains access to protected dashboard
 
 
-🧪 Webhook Testing with Stripe CLI
+### 🧪 Webhook Testing with Stripe CLI
 ```bash
 Use Stripe CLI to forward webhook events during development:
 stripe listen --forward-to localhost:8000/backend/webhook/
@@ -103,7 +105,7 @@ Copy the secret from the CLI output:
 Paste this into your .env file:
 STRIPE_WEBHOOK_SECRET=whsec_...
 stripe trigger checkout.session.completed
-```bash
+```
 
 ![Login Page](screenshots/login.png)
 ![Stripe Checkout](screenshots/subscribe.png)
